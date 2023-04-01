@@ -33,6 +33,8 @@
             buttonBrowse = new Button();
             AudioDeviceLabel = new Label();
             AudioFIleLabel = new Label();
+            ActiveWindowTextBox = new Label();
+            ActiveWindowLabel = new Label();
             SuspendLayout();
             // 
             // audioDeviceComboBox
@@ -80,11 +82,29 @@
             AudioFIleLabel.TabIndex = 4;
             AudioFIleLabel.Text = "Audio File";
             // 
+            // ActiveWindowTextBox
+            // 
+            ActiveWindowTextBox.Location = new Point(28, 177);
+            ActiveWindowTextBox.Name = "ActiveWindowTextBox";
+            ActiveWindowTextBox.Size = new Size(473, 25);
+            ActiveWindowTextBox.TabIndex = 5;
+            // 
+            // ActiveWindowLabel
+            // 
+            ActiveWindowLabel.AutoSize = true;
+            ActiveWindowLabel.Location = new Point(28, 148);
+            ActiveWindowLabel.Name = "ActiveWindowLabel";
+            ActiveWindowLabel.Size = new Size(109, 20);
+            ActiveWindowLabel.TabIndex = 6;
+            ActiveWindowLabel.Text = "Active Window";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(525, 163);
+            ClientSize = new Size(525, 244);
+            Controls.Add(ActiveWindowLabel);
+            Controls.Add(ActiveWindowTextBox);
             Controls.Add(AudioFIleLabel);
             Controls.Add(AudioDeviceLabel);
             Controls.Add(buttonBrowse);
@@ -105,5 +125,7 @@
         private Button buttonBrowse;
         private Label AudioDeviceLabel;
         private Label AudioFIleLabel;
+        private Label ActiveWindowTextBox;
+        private Label ActiveWindowLabel;
     }
 }

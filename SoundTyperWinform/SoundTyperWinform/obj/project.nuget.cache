@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zMpx1Trja8yyJLBPCcLcgtQPpu8DT51pgLJK7zdYBLnrVgSCKz8l6D8fi9KVWd7KCUizmSKKr7nJYukkwT879g==",
+  "dgSpecHash": "X9hhdaeM6FyMgM0K+leI1Bm2oKouaYcMVD3cFirKTXHVF0cgBaUEoyhJEc4SisX/zHIejxa/bhGaCPdgoLGowQ==",
   "success": true,
-  "projectFilePath": "Z:\\Users\\Justin\\Documents\\SoundTyperWinform\\SoundTyperWinform\\SoundTyperWinform.csproj",
+  "projectFilePath": "Z:\\Users\\Justin\\Documents\\GitHub\\SoundTyperWinform\\SoundTyperWinform\\SoundTyperWinform\\SoundTyperWinform.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Justin\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Justin\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

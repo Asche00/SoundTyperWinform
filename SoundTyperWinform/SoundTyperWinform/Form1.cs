@@ -74,23 +74,25 @@ namespace SoundTyperWinform
                     var keyCode = Marshal.ReadInt32(lParam);
                     if (IsAlphanumeric(keyCode) || IsNumber(keyCode) || IsPunctuation(keyCode))
                     {
-                        //if (GetActiveWindowTitle() == "eos")
-                        //{
-                        var deviceIndex = audioDeviceComboBox.SelectedIndex;
-                        if (deviceIndex >= 0)
+                        string activeWindow = GetActiveWindowTitle();
+                        ActiveWindowTextBox.Text = activeWindow;
+                        if (GetActiveWindowTitle().ToLower() == "eos")
                         {
-                            var deviceId = devices[deviceIndex].ID;
-                            var audioFile = new AudioFileReader(textBoxFilePath.Text);
-                            audioFile.Volume = 1f; // set the volume to maximum (1.0)
-                            var player = players.Find(p => !p.PlaybackState.Equals(PlaybackState.Playing)); // find an available player
-                            if (player != null)
+                            var deviceIndex = audioDeviceComboBox.SelectedIndex;
+                            if (deviceIndex >= 0)
                             {
-                                player.DeviceNumber = deviceIndex;
-                                player.Init(audioFile);
-                                player.Play();
+                                var deviceId = devices[deviceIndex].ID;
+                                var audioFile = new AudioFileReader(textBoxFilePath.Text);
+                                audioFile.Volume = 1f; // set the volume to maximum (1.0)
+                                var player = players.Find(p => !p.PlaybackState.Equals(PlaybackState.Playing)); // find an available player
+                                if (player != null)
+                                {
+                                    player.DeviceNumber = deviceIndex;
+                                    player.Init(audioFile);
+                                    player.Play();
+                                }
                             }
                         }
-                        //}
                     }
                 }
                 return CallNextHookEx(IntPtr.Zero, nCode, wParam, lParam);
