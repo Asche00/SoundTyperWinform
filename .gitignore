@@ -354,3 +354,5 @@ obj/
 .vs/
 .idea/
 *.user
+.vs/
+SoundTyperWinform/.vs
